@@ -7,7 +7,7 @@ function initialize() {
     // create the map itself
     var mapOptions = {
         center: basepos,
-        zoom: 0,
+        zoom: 17,
         mapTypeId: google.maps.MapTypeId.ROADMAP,
         navigationControl: true,
         navigationControlOptions: {
@@ -17,26 +17,11 @@ function initialize() {
 
     map = new google.maps.Map(document.getElementById('map'), mapOptions);
 
-    // create the directions service
-    var rendererOptions = {
-        markerOptions: {
-            visible: false // don't show markers in directions results
-        }
-    };
-
-    directionsDisplay = new google.maps.DirectionsRenderer(rendererOptions);
-    directionsDisplay.setMap(map);
-}
-
-
-function updateDirectionsForRoute(route) {
-    var request = createDirectionsRequest(route);
-
-    directionsService.route(request, function (response, status) {
-        if (status == google.maps.DirectionsStatus.OK) {
-            directionsDisplay.setDirections(response);
-        } else {
-            console.error('direction calculation had an error.');
-        }
+    var marker = new google.maps.Marker({
+        position: basepos,
+        map: map,
+        title: 'MakerHub.de'
     });
 }
+
+initialize();
