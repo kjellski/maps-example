@@ -22,7 +22,7 @@ This is an example project for the #HHjs UserGroup meeting for "Maps Hacking" at
 Google Maps Getting Started Guide for obtaining an API key:
 https://developers.google.com/maps/documentation/javascript/tutorial
 
-Google Maps API v4 Reference:
+Google Maps API v3 Reference:
 https://developers.google.com/maps/documentation/javascript/reference
 
 Google Maps Demo Website:
