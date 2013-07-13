@@ -6,6 +6,7 @@
 * start up the server and have a look at ```localhost:9000```
 
 Or, just install node.js and then copy and paste this:
+
     git clone https://github.com/kjellski/maps-example.git
     cd maps-example
     npm install -g yo
